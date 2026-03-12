@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MVP: Бронирование услуг</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Салон "Уют"</h1>
+        <p>Простой способ записи</p>
+
+        <!-- Панель администратора -->
+        <div class="admin-section">
+            <h2>Панель администратора</h2>
+            <div class="admin-panel">
+                <div class="service-management">
+                    <h3>Новая услуга</h3>
+                    <input type="text" id="serviceName" placeholder="Название (например, Стрижка)">
+                    <input type="number" id="serviceDuration" placeholder="Длительность (мин)">
+                    <input type="number" id="servicePrice" placeholder="Цена (руб)">
+                    <button id="addServiceBtn">Добавить услугу</button>
+                </div>
+                <div class="bookings-list">
+                    <h3>Все брони</h3>
+                    <ul id="bookingsContainer">
+                        <!-- Сюда будут добавляться брони -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Блок для клиента -->
+        <div class="client-section">
+            <h2>Запись онлайн</h2>
+
+            <div class="form-group">
+                <label for="serviceSelect">Выберите услугу:</label>
+                <select id="serviceSelect">
+                    <option value="">-- Сначала добавьте услугу в панели админа --</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="dateInput">Выберите дату:</label>
+                <input type="date" id="dateInput" />
+            </div>
+
+            <button id="checkSlotsBtn">Показать свободное время</button>
+
+            <div id="slotsContainer"></div>
+
+            <div id="bookingForm" style="display: none;">
+                <h3>Введите данные</h3>
+                <input type="text" id="clientName" placeholder="Ваше имя">
+                <input type="tel" id="clientPhone" placeholder="Номер телефона">
+                <button id="confirmBookingBtn">Подтвердить запись</button>
+                <p id="selectedSlotInfo"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
