@@ -1,0 +1,90 @@
+body {
+    font-family: sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+.container {
+    max-width: 1000px;
+    margin: auto;
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+h1, h2 {
+    color: #333;
+}
+.admin-section {
+    background-color: #eef9ff;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    border: 1px solid #b8daff;
+}
+.admin-panel {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+.service-management, .bookings-list {
+    flex: 1;
+    min-width: 250px;
+}
+input, select, button {
+    padding: 10px;
+    margin: 5px 0 15px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+}
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+button:hover {
+    background-color: #0056b3;
+}
+.bookings-list ul {
+    list-style: none;
+    padding: 0;
+}
+.bookings-list li {
+    background: #f9f9f9;
+    border-left: 4px solid #28a745;
+    margin-bottom: 8px;
+    padding: 10px;
+    font-size: 0.9em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.bookings-list button {
+    width: auto;
+    margin: 0;
+    padding: 5px 10px;
+    background-color: #dc3545;
+}
+#slotsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 20px 0;
+}
+.time-slot {
+    background-color: #28a745;
+    color: white;
+    padding: 12px 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    border: none;
+    width: auto;
+}
+.time-slot:hover {
+    background-color: #1e7e34;
+}
